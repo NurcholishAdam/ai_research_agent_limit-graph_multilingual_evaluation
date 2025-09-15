@@ -1,0 +1,100 @@
+{
+  "required_languages": ["en", "id", "ar"],
+  "max_evaluation_time": 1800,
+  "quality_thresholds": {
+    "min_overall_score": 0.6,
+    "min_accuracy": 0.7,
+    "min_semantic_score": 0.6,
+    "max_error_rate": 0.2,
+    "min_rtl_score": 0.5,
+    "min_cultural_awareness": 0.5,
+    "min_language_score": 0.5,
+    "max_response_time": 10.0
+  },
+  "leaderboard_path": "leaderboard.json",
+  "results_dir": "evaluation_results",
+  "enable_leaderboard_update": true,
+  "enable_pr_comments": true,
+  "max_tests_per_language": 10,
+  "supported_languages": {
+    "en": {
+      "name": "English",
+      "script": "latin",
+      "rtl": false,
+      "cultural_contexts": ["western", "academic", "business", "technical"]
+    },
+    "id": {
+      "name": "Indonesian",
+      "script": "latin", 
+      "rtl": false,
+      "cultural_contexts": ["southeast_asian", "islamic", "modern", "traditional"]
+    },
+    "ar": {
+      "name": "Arabic",
+      "script": "arabic",
+      "rtl": true,
+      "cultural_contexts": ["islamic", "middle_eastern", "classical", "modern"]
+    },
+    "es": {
+      "name": "Spanish",
+      "script": "latin",
+      "rtl": false,
+      "cultural_contexts": ["hispanic", "latin_american", "european", "modern"]
+    },
+    "fr": {
+      "name": "French",
+      "script": "latin",
+      "rtl": false,
+      "cultural_contexts": ["francophone", "european", "african", "modern"]
+    }
+  },
+  "task_types": [
+    "needle_haystack",
+    "question_answering", 
+    "semantic_similarity",
+    "distractor_resistance",
+    "context_length",
+    "cultural_awareness",
+    "rtl_processing"
+  ],
+  "difficulty_levels": ["easy", "medium", "hard", "expert"],
+  "evaluation_metrics": {
+    "core_metrics": [
+      "accuracy",
+      "semantic_score", 
+      "response_time",
+      "error_rate"
+    ],
+    "specialized_metrics": [
+      "distractor_robustness",
+      "context_length_score",
+      "rtl_handling_score",
+      "cultural_awareness_score",
+      "cross_lingual_consistency"
+    ]
+  },
+  "metric_weights": {
+    "accuracy": 0.25,
+    "semantic_score": 0.20,
+    "distractor_robustness": 0.15,
+    "context_length_score": 0.15,
+    "rtl_handling_score": 0.10,
+    "cultural_awareness_score": 0.10,
+    "cross_lingual_consistency": 0.05
+  },
+  "ci_settings": {
+    "timeout_seconds": 1800,
+    "max_memory_mb": 4096,
+    "enable_debug_logging": false,
+    "enable_performance_profiling": false,
+    "enable_detailed_traces": true
+  },
+  "reporting": {
+    "generate_markdown_report": true,
+    "generate_json_export": true,
+    "include_detailed_results": true,
+    "include_error_traces": true,
+    "enable_github_summary": true,
+    "enable_pr_comments": true
+  }
+}
