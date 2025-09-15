@@ -352,4 +352,4 @@ print(f'Arabic tests: {len(suite.test_cases)}')
 
 ## 📄 License
 
-This CI Hook system is part of the LIMIT-GRAPH project and follows the same licensing terms.
+This CI Hook system is part of the LIMIT-GRAPH project in AI Research Agent Team and follows the same licensing terms.
